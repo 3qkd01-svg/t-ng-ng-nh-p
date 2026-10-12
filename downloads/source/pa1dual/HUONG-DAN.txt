@@ -1,0 +1,41 @@
+PA1DUAL - mot tab, hai luong xu ly, ban doc lap
+1. Can Node.js 22+ va Edge/Chrome tren Windows duoc cac phan mem nay ho tro.
+   Nhan dup start-pa1dual.cmd. Lan dau tai playwright-core 1.63.0 qua npm.
+2. Chon trinh duyet; Enter = Edge. API offset Enter = 50ms sau moc gio.
+   Offset 50ms la muc tieu; dong ho/VPS co the lech, khong bao dam chinh xac 50ms.
+3. Tu dang nhap MOT LAN tren tab hien ra. Khong gui mat khau/cookie/token cho ai.
+4. Lich tu dong: 11, 13, 15, 17, 19, 21 gio Ha Noi, tiep tuc ngay hom sau.
+   Chon khung gio CHUA bat dau; khoi dong luc 11:00:01 se cho 13h.
+5. Phien dau chi chay UI PA1RETRY500: hong bao moi dau tien, lay ID thuc te.
+   Phien sau API du doan ID thuc te cua phien truoc +1; day la DU DOAN, co the sai.
+   Moi phien van theo doi chat de doi chieu. Luon cap nhat moc bang ID THUC TE.
+   Neu bo lo mot khung gio/khong co ID thuc te, phien sau chi UI de lay lai moc.
+   Khoi dong lai chuong trinh luon bat dau UI, khong tai lai cookie hoac moc cu.
+6. API chay NEN trong CUNG TAB, dung bo gui yeu cau/xac thuc co san cua trang.
+   Khong can tab thu hai, khong doi ID lien tuc hay gui don.
+   API du doan toi da MOT yeu cau, cho phan hoi toi da 30s. UI giu timeout goc cua trang.
+   Neu khong nhan dien duoc bo gui hien tai cua trang, ghi ly do va dung UI.
+7. Toi da 1 API + 2 UI/phien, giu luong UI PA1RETRY500.
+   Thu nut Mo thu 2 sau 500ms tinh tu lan Mo dau, neu nut van kha dung.
+   Khong mo khoa nut dang xu ly. Neu API da tra code 1 cho cung ID thi bo UI trung.
+   Neu API con cho phan hoi, UI van xu ly hong bao thuc te nhu binh thuong.
+   HTTP 200 khong tu no bao dam nhan duoc; xem applicationCode va lich su tren trang.
+8. Lan khoi dong: sau dang nhap vao chat lam nong mot lan, roi ve trang chu.
+   Moi khung gio chi vao chat truoc 30s. Giam anh/video/tracker; giu hinh nut Mo va CAPTCHA.
+9. Sau KHI PHIEN KET THUC, GIU CHAT 5 PHUT, roi ve trang chu.
+   Phien ke tiep chi vao chat truoc 30s, khong vao chat lam nong lai som hon.
+   Vi du phien ket thuc 11:00:12 thi ve trang chu khoang 11:05:12.
+10. Mat ket noi: cho 12s, toi da 3 lan khoi phuc, cach nhau it nhat 15s.
+    Lan 1 ra/vao chat; lan 2-3 tai lai. Chi san sang sau khi thay ket noi hoat dong.
+    Khong tai lai khi da co yeu cau nhan dang xu ly. API khong can tin chat den truoc.
+11. Giu chuong trinh, trinh duyet, VPS va mang hoat dong. Thu nho cua so duoc;
+    dong tab/chuong trinh, VPS ngu hoac het phien dang nhap thi khong gui duoc.
+    Nhan Enter trong cua so chuong trinh de DUNG.
+12. Bao cao: reports/pa1dual-....json. Co ID du doan/thuc te, khop hay khong,
+    moi yeu cau co source api/ui, thoi gian gui, HTTP/code/loi. Khong ghi auth/body/chat.
+    pa1dual-state.json chi luu moc thuc te de ban xem, khong tu nap lai khi khoi dong.
+13. Da thu bang may chu MO PHONG; chua thu yeu cau nhan that tren tai khoan cua ban.
+    Mot tab chung phien dang nhap van dung chung duong mang va may chu.
+    Hai luong la tac vu bat dong bo, khong phai hai CPU/ket noi Internet rieng.
+    Neu JavaScript cua tab bi do, API cung co the bi cham; chua tach khoi trinh duyet.
+    Cong cu khong bao dam khac phuc nghen mang, ID +1 hoac tin chat den muon.

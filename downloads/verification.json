@@ -1,0 +1,12 @@
+{
+  "buildTool": "esbuild 0.25.0",
+  "artifact": "dist/pa1dual-full.zip",
+  "zipSha256": "50d94d084a3fab6a54fbe91c09a4a350f3212e44cc6d78088f5125486332a945",
+  "zipBytes": 14993,
+  "files": 5,
+  "runtimeInstall": "fresh extraction, npm ci --ignore-scripts --no-audit --no-fund",
+  "browserTests": { "passed": 9, "failed": 0, "skipped": 0, "target": "bundled pa1dual.mjs extracted from the ZIP", "server": "local mock", "browser": "Chromium" },
+  "installer": { "runtime": "PowerShell 7.4.6 on Linux", "parserFormsPassed": 3, "corruptZipRejectedBeforeWrite": true, "zipReconstruction": "byte-identical", "extractedFiles": 5, "autoStart": "mocked and path-checked" },
+  "olderZipPreserved": "0550a2840098e7858999350bdbedb675385ba865462d685f5e4163115a618316",
+  "notTested": ["Windows command launcher", "real authenticated website claim", "the user's VPS"]
+}
