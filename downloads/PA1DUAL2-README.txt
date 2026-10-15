@@ -1,25 +1,28 @@
-PA1DUAL2 0.8.1 - 2026-10-15
+PA1DUAL2 0.8.2 - 2026-10-15
 
-Enter a public HTTPS URL, select Edge/Chrome, select Windows (1) or standard
-Mobile (2), then enter the API offset in ms (default 50).
-Login and CAPTCHA/OTP verification are manual in the browser. After navigation,
-login confirmation has a 120-second deadline. The schedule starts only after
-confirmation. Expiry stops and closes the browser; reopen the launcher to retry.
-The standard Mobile choice uses Playwright's Pixel 7 UA/viewport/touch profile.
-The engine remains Chromium on Windows, not a custom GPM kernel or real Android.
-There is no automatic domain switching, verification solver or bypass.
-State is scoped to each origin and old unscoped files are preserved.
-The original UI/API limits, schedule, recovery and media rules remain in place.
+Prediction is exactly the actual selected envelope ID +1 and +2.
+Example: actual 14092 -> next API pair 14093/14094.
+Then actual 14091 -> next pair 14092/14093, even if higher IDs were also seen.
+No maximum-ID anchor, hole rotation, or skipping of previously seen/successful
+candidates. Other chat events are logged but cannot replace the selected anchor.
+API results do not replace the actual chat anchor. The first startup slot still
+learns the native UI request; missing actual chat data requires UI calibration.
+Both the prediction anchor and its source are printed and saved in reports.
+Old v1 ID-state files are readable, but every startup learns a fresh UI anchor.
 
-Requires Node.js >=22 and supported Edge/Chrome on Windows.
-Stop older versions first. Run start-pa1dual2.cmd from the extracted folder.
-First launch installs playwright-core 1.63.0 with npm ci from the pinned lockfile.
-Enter stops the program after the initial startup questions.
+Existing features retained: public HTTPS URL input, manual login with a 120s
+deadline, standard mobile profile option, one tab, 30s chat lead, bounded recovery,
+media reduction, 5min post-round hold, at most 2 API plus 2 UI requests per slot.
+Mobile uses Playwright Pixel 7 UA/viewport/touch, not a custom GPM kernel.
+Verification is manual. No automatic domain switching or CAPTCHA solver.
 
-Validation: 29 tests passed (7 source core + 22 extracted-ZIP tests), none failed
-or skipped. Includes Chromium against local fixtures, login expiry with short
-test deadlines, stalled evaluation, user-supplied URL, mobile UA/touch/viewport,
-origin-scoped state, UI/API concurrency, request limits and socket recovery.
-No real authenticated reward claim and no Windows launcher execution tested.
-A fresh download folder has separate state. Reuse the same launcher folder
-on later starts to retain ID history. See HUONG-DAN.txt for details.
+Requires Node >=22 and supported Edge/Chrome on Windows.
+Stop previous versions, extract ZIP, then run start-pa1dual2.cmd.
+First run installs pinned playwright-core 1.63.0 using npm ci.
+Reuse the same extracted folder on future runs to keep per-origin ID memory.
+
+Validation: 33 tests passed, none failed/cancelled/skipped (10 source core and
+23 extracted-ZIP tests), including the exact 14092 -> 14091 regression with
+unrelated higher chat events and real native API dispatch against a local mock.
+No authenticated real-site claim or Windows launcher execution tested.
+This ID fix does not establish a fix for production HTTP timeouts.

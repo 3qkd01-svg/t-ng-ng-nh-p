@@ -1,4 +1,4 @@
-PA1DUAL2 0.8.1 - nhap link, cho dang nhap 2 phut, Mobile tieu chuan
+PA1DUAL2 0.8.2 - ID thuc te +1,+2; khong lay ID lon nhat
 
 1. Dung ban cu truoc khi chay ban nay. Can Node.js 22+ va Edge/Chrome
    tren Windows duoc cac phan mem nay ho tro. Mo start-pa1dual2.cmd.
@@ -28,16 +28,19 @@ PA1DUAL2 0.8.1 - nhap link, cho dang nhap 2 phut, Mobile tieu chuan
    Chi hoc cach gui/ID lam moc API khi thay yeu cau Mo thuc te tu UI.
    Khong can phan hoi thanh cong de hoc moc. Neu chua bam/gui duoc,
    phien sau van UI de hoc lai. Hien ro cac moc bam va loi HTTP.
-6. Sau khi hoc UI, API du doan toi da 2 ID, moi ID gui MOT lan/phien.
-   Neu 15h xac nhan 111: 17h thu 112,113.
-   Neu 17h xac nhan 113: 19h thu 112,114.
-   Neu 19h xac nhan 112: 21h thu 114,115; moc cao nhat van la 113.
-   Khi nhieu ID con thieu, luan phien mot ID con thieu + mot ID phia truoc.
+6. Sau khi hoc UI, lay ID hong bao thuc te da chon trong phien vua qua.
+   Phien ke tiep gui dung ID +1 va ID +2, moi ID gui MOT lan/phien.
+   Vi du 17h thay 14092: 19h gui 14093,14094.
+   Neu 19h thay 14091: 21h gui 14092,14093.
+   Khong lay ID lon nhat, khong luan phien ID con thieu, khong tu bo qua ID.
+   ID khac den sau trong chat khong thay moc hong bao dang chon.
+   Ket qua API khong thay moc chat, ke ca API tra code 1 cho ID cao hon.
+   Neu phien truoc khong co moc chat thuc te, phien sau UI de hoc lai.
    Day la DU DOAN; may chu co the phat ID/gio khac, gui som co the that bai.
-7. Chi loai ID khoi du doan phien SAU neu thay trong su kien chat phu hop,
-   yeu cau UI da Mo, hoac API tra code 1. HTTP 200 mot minh khong du.
-   ID moi gui thu, timeout hoac code khac chua ro van duoc giu de xet lai.
-   Cho phep ID ra khong theo thu tu; bo qua tin lap cua ID da xac nhan tu phien truoc.
+7. ID da thay, da gui loi hoac da co phan hoi khong lam doi cap +1,+2.
+   Bo nho ID chi de chan tin chat lap va ghi bao cao; khong day moc API len cao.
+   Log va bao cao ghi ro moc ID thuc te, nguon moc va cap du doan.
+   Moi lan khoi dong van hoc lai UI, khong lay moc ID lon nhat tu bo nho cu.
 8. API chay trong CUNG TAB va phien dang nhap, dung bo gui/xac thuc cua trang.
    Hai ID cung nham moc gio + offset, moi yeu cau timeout 30s.
    UI van theo doi chat, chi mo mot hong bao moi, thu Mo lan 2 sau 500ms
@@ -55,7 +58,7 @@ PA1DUAL2 0.8.1 - nhap link, cho dang nhap 2 phut, Mobile tieu chuan
 11. Bo nho reports/pa1dual2-state-<ma-may-chu>.json duoc luu sau moi phien.
     Moi may chu (origin) dung bo nho rieng, tranh tron ID khi nhap link khac.
     Tep pa1dual2-state.json ban cu van duoc giu, khong tu dong nhap sang ban nay.
-    Mo lai CUNG start-pa1dual2.cmd se nho ID da co va ID con thieu,
+    Mo lai CUNG start-pa1dual2.cmd se nho ID da quan sat va ket qua,
     nhung phien dau van UI de kiem tra lai cach gui va dang nhap hien tai.
     Tai lai ZIP vao thu muc moi tao bo nho RIENG. Khong tu doc bao cao ban cu.
     File bo nho hong duoc giu thanh .invalid.json va chuong trinh hoc lai bang UI.

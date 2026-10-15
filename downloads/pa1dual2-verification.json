@@ -1,9 +1,9 @@
 {
-  "release": "0.8.1",
+  "release": "0.8.2",
   "build": "pa1dual2",
   "date": "2026-10-15",
-  "sha256": "a41a2a487ffdd84d9ac58ccec172f90d9cb98c2ddc9daa16dfe868cb5b2d11a9",
-  "bytes": 17672,
+  "sha256": "93fd63b6427ceff8fa6628e8b0fd1a472fa533bede2df0a80d1303a6fb8320d9",
+  "bytes": 18022,
   "files": 5,
   "testCommand": [
     "node",
@@ -16,23 +16,26 @@
     "test/pa1dual2.test.mjs"
   ],
   "tests": {
-    "passed": 29,
+    "passed": 33,
     "failed": 0,
     "cancelled": 0,
     "skipped": 0,
-    "sourceCore": 7,
-    "extractedZip": 22,
-    "durationSeconds": 43.705
+    "sourceCore": 10,
+    "extractedZip": 23,
+    "durationSeconds": 61.089
   },
-  "installation": "npm ci --ignore-scripts --no-audit --no-fund with pinned lockfile in fresh extraction",
-  "changes": [
-    "HTTPS URL prompt; no automatic domain changes",
-    "120-second initial login deadline; no schedule before login confirmation; accelerated timeout and stalled-evaluation tests",
-    "standard Pixel 7 mobile profile from playwright-core; Chromium on Windows, not a GPM kernel or real Android",
-    "origin-scoped ID memory; old state files preserved"
+  "regression": "actual 14092 plus unrelated 14097, then actual 14091 plus unrelated 14099 -> next API pair exactly 14092/14093",
+  "rule": "use selected actual envelope ID plus 1 and plus 2; do not skip seen/successful IDs or use highest observed ID; API results do not set the chat anchor",
+  "preservedFeatures": [
+    "single tab",
+    "URL input",
+    "120-second login deadline",
+    "standard mobile option",
+    "30-second chat lead",
+    "5-minute post-round hold",
+    "max 2 API and 2 UI requests per slot"
   ],
+  "installation": "fresh extracted ZIP installed with npm ci --ignore-scripts using pinned lockfile",
   "realAuthenticatedClaimTested": false,
-  "windowsLauncherExecuted": false,
-  "captcha": "manual verification; no solver or bypass",
-  "powershellDownload": "to be verified after publication"
+  "windowsLauncherExecuted": false
 }
