@@ -1,0 +1,41 @@
+{
+  "build": "pa1dual2",
+  "version": "0.8.0",
+  "zip": "dist/pa1dual2.zip",
+  "sha256": "ab32d7d6f29fb37e34b60d10231b2b431f831e35328efdfbbcff69523485ecc4",
+  "zipBytes": 16348,
+  "files": 5,
+  "buildTool": "esbuild 0.25.0",
+  "runtimeDependency": "playwright-core 1.63.0 installed using fresh npm ci from the ZIP lockfile",
+  "tests": {
+    "passed": 20,
+    "failed": 0,
+    "skipped": 0,
+    "core": 7,
+    "stateIO": 2,
+    "browser": "Chromium",
+    "target": "bundled pa1dual2.mjs extracted from this exact ZIP",
+    "server": "local mock",
+    "browserCases": 11
+  },
+  "verified": [
+    "111 -> 113 -> 112 retains unknown hole and highest confirmed frontier",
+    "pending holes rotate; only confirmed IDs removed",
+    "fresh UI Open request required for calibration after restart",
+    "confirmed and pending IDs persist; malformed state backed up",
+    "at most two distinct API requests and two UI requests per slot",
+    "API and UI execute in one tab with native authentication and opening locks",
+    "500 ms permitted second UI click survives success for another API ID",
+    "bridge restored after page reload; API can send without chat event",
+    "failed UI request records error and still learns the observed Open request",
+    "normal chat reconnect before opening",
+    "30-second chat entry and five-minute post-finish hold contract"
+  ],
+  "oldArtifactPreserved": "50d94d084a3fab6a54fbe91c09a4a350f3212e44cc6d78088f5125486332a945",
+  "legacySharedModules": "byte-equivalent after newline normalization",
+  "notTested": [
+    "new build sending authenticated claims to the real site",
+    "the user Windows VPS",
+    "Windows command launcher execution"
+  ]
+}
