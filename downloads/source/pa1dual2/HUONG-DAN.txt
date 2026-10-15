@@ -1,12 +1,23 @@
-PA1DUAL2 0.8.0 - 1 tab, UI + toi da 2 ID API
+PA1DUAL2 0.8.1 - nhap link, cho dang nhap 2 phut, Mobile tieu chuan
 
 1. Dung ban cu truoc khi chay ban nay. Can Node.js 22+ va Edge/Chrome
    tren Windows duoc cac phan mem nay ho tro. Mo start-pa1dual2.cmd.
    Lan dau npm ci tai playwright-core 1.63.0 tu lockfile qua HTTPS.
-2. Chon 1=Edge (Enter mac dinh), 2=Chrome. API offset mac dinh 50ms.
+2. Dan LINK HTTPS cong khai cua trang chinh thuc vao cau hoi dau tien.
+   Enter de giu link hay8888.ink hien tai. Link chi dung cho lan chay nay.
+   Khong nhap link chua mat khau/token. Khong tu doi mien khi gap CAPTCHA.
+   Chon 1=Edge (Enter mac dinh), 2=Chrome. API offset mac dinh 50ms.
+   Che do 1=Windows (mac dinh), 2=Mobile tieu chuan theo Pixel 7:
+   User-Agent Chrome Android, kich thuoc man hinh va cam ung cua dien thoai.
+   Nhan van la Chromium tren Windows; khong phai Android that hoac nhan rieng cua GPM.
+   Khong cam ket trang se nhan dien nhu dien thoai that; khong tu xu ly CAPTCHA.
    Co the nhap so nguyen 0..10000ms. Moc gio theo dong ho VPS, hien thi gio Ha Noi.
    Offset la muc tieu, khong dam bao gui/den may chu dung tung mili giay.
-3. Tu dang nhap trong tab duoc mo. Sau hai cau hoi ban dau,
+3. Tu dang nhap va giai CAPTCHA/OTP (neu co) trong tab duoc mo.
+   Sau buoc mo trang, cho toi da 120 giay de trang xac nhan dang nhap.
+   Dang nhap som thi bat dau lich ngay, khong doi het 2 phut.
+   Het 2 phut chua xac nhan: bao loi va dong trinh duyet; chua bat dau lich nhan.
+   Mo lai chuong trinh de thu tiep. Sau bon cau hoi ban dau,
    nhan Enter trong cua so chuong trinh de DUNG toan bo lich.
 4. Lich 11/13/15/17/19/21 gio Ha Noi, tiep tuc 11h ngay hom sau.
    Chon khung gio chua bat dau; mo sau 11:00:00 se cho 13h.
@@ -41,7 +52,9 @@ PA1DUAL2 0.8.0 - 1 tab, UI + toi da 2 ID API
     HTTP/code/loi, ID da xac nhan, ID con cho, moc bam va ket noi lai.
     Bao cao khong luu cookie, mat khau, token, chu ky, body hoac chat thuong.
     Thoi gian co Z trong JSON la UTC, cong 7h de doc theo gio Ha Noi.
-11. Bo nho reports/pa1dual2-state.json duoc luu sau moi phien.
+11. Bo nho reports/pa1dual2-state-<ma-may-chu>.json duoc luu sau moi phien.
+    Moi may chu (origin) dung bo nho rieng, tranh tron ID khi nhap link khac.
+    Tep pa1dual2-state.json ban cu van duoc giu, khong tu dong nhap sang ban nay.
     Mo lai CUNG start-pa1dual2.cmd se nho ID da co va ID con thieu,
     nhung phien dau van UI de kiem tra lai cach gui va dang nhap hien tai.
     Tai lai ZIP vao thu muc moi tao bo nho RIENG. Khong tu doc bao cao ban cu.
