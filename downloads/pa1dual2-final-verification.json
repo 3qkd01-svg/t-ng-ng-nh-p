@@ -1,0 +1,51 @@
+{
+  "release": "0.9.0-final",
+  "date": "2026-10-23",
+  "sha256": "c104c9b22e4855ff5798b1b63ef1bcf3c64206e64c007f3bcc7cf21100bf2448",
+  "bytes": 19582,
+  "files": 5,
+  "tests": {
+    "passed": 43,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "sourceUnit": 18,
+    "extractedZip": 25,
+    "seconds": 78.833
+  },
+  "testCommand": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "--test-reporter=spec",
+    "test/dual2-core.test.mjs",
+    "test/dual2-state.test.mjs",
+    "test/dual2-startup.test.mjs",
+    "test/fast-dispatch.test.mjs",
+    "test/chat-recovery.test.mjs",
+    "test/pa1dual2.test.mjs"
+  ],
+  "install": "fresh extracted ZIP; npm ci --ignore-scripts with pinned lockfile",
+  "preserved": [
+    "actual selected ID +1/+2",
+    "two distinct API requests maximum",
+    "at most two native UI requests, second at 500ms if allowed by site",
+    "single authenticated browser tab",
+    "30s chat lead",
+    "5min post-round hold",
+    "120s manual login deadline",
+    "URL input",
+    "standard mobile option"
+  ],
+  "changes": [
+    "nonblocking local request metadata binding; no renderer evaluation while attributing a paused request",
+    "single browser invocation to initialize and dispatch the two native API calls",
+    "bounded report cleanup when renderer commands stall",
+    "observe chat loss during API requests; navigate only after requests finish",
+    "install latency sampler in current SPA document and after reload",
+    "per-round ID and dispatch-timing observation summary"
+  ],
+  "privacy": "no auth headers, cookie, token, signature or request/response bodies exported by the metadata binding",
+  "realAuthenticatedClaimTested": false,
+  "windowsLauncherExecuted": false
+}
