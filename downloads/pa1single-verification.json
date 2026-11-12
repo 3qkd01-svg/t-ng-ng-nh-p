@@ -33,5 +33,16 @@
   "privacy": "No auth headers, cookies, tokens, signatures, chat contents or request/response bodies in exported reports.",
   "realAuthenticatedClaimTested": false,
   "windowsLauncherExecuted": false,
-  "claimServiceAvailabilityGuaranteed": false
+  "claimServiceAvailabilityGuaranteed": false,
+  "powershellDownload": {
+    "zipCommit": "b5a210930d1f37e394c6629b2153937da79025a1",
+    "branch": "codex/pa1single-20261112",
+    "realHttpsDownload": true,
+    "zipByteIdentical": true,
+    "parserFormsPassed": 3,
+    "extractedFilesByteIdentical": 5,
+    "corruptZipRejectedBeforeExtractionAndLaunch": true,
+    "powershell": "7.4.6/Linux",
+    "launcher": "mocked and path-checked; Windows execution untested"
+  }
 }
