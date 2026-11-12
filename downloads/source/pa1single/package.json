@@ -1,0 +1,15 @@
+{
+  "name": "pa1single",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node pa1single.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "1.63.0"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "release": "1.0.0",
+  "build": "pa1single",
+  "date": "2026-11-12",
+  "sha256": "018fe378445a1ea18a7ade6d11de5d54940452fb890ef203b94386c2a52a491e",
+  "bytes": 15980,
+  "files": 5,
+  "tests": {
+    "passed": 28,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "sourceUnit": 8,
+    "extractedZip": 20,
+    "seconds": 53.048515509
+  },
+  "installation": "fresh extracted ZIP; npm ci --ignore-scripts with pinned playwright-core 1.63.0 lockfile",
+  "behavior": [
+    "one visible browser tab and native UI flow",
+    "no predicted IDs, calibration or direct API sender",
+    "first new eligible envelope only, up to two native Open clicks with optional 500ms delay",
+    "site opening lock retained",
+    "manual login 120s; URL input; Windows or standard mobile",
+    "11/13/15/17/19/21 Hanoi schedule, 30s chat lead, 5min hold after round",
+    "connection recovery observed while waiting at home",
+    "native token/history/document/socket initialization guards",
+    "bounded three recovery attempts per phase, 12s grace, 15s cooldown",
+    "no automatic navigation from slot-15s through slot+5s",
+    "native token XHR minimum timeout 20s, native Open XHR minimum timeout 30s; no HTTP retry",
+    "no false ready status for hidden chat or missing WebSocket data",
+    "bounded single outstanding renderer command"
+  ],
+  "privacy": "No auth headers, cookies, tokens, signatures, chat contents or request/response bodies in exported reports.",
+  "realAuthenticatedClaimTested": false,
+  "windowsLauncherExecuted": false,
+  "claimServiceAvailabilityGuaranteed": false
+}
