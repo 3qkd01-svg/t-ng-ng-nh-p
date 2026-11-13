@@ -1,0 +1,51 @@
+{
+  "build": "pa1retry500",
+  "release": "0.5.2-clock120",
+  "date": "2026-11-13",
+  "sha256": "16f3f8a8a0dc00d2791d5ef1e4297bf386674bfe71d7b7adbd25cdcca4f31637",
+  "bytes": 19640,
+  "files": 10,
+  "baseline": {
+    "release": "0.5.0",
+    "zipSha256": "77887076da4697008aa904d47db5d29148f3d5a3aa736a9039541bf24161e894",
+    "byteIdenticalOriginalFiles": {
+      "fast-click.mjs": "1245481316d250d6a9f663b02f427773f6827b5ee06cb3f73c0458877bcbc247",
+      "second-open.mjs": "9afcbee579aa68fdb1b8220e1a118445c83d1444376f861465cb5a286b991066",
+      "chat-recovery.mjs": "215d927630cf6e7294519804c5aa3301cf5560c1985c7287fd562deba3f81a1b",
+      "opt-diagnostics.mjs": "dec1833b4ab6fa8e091054fcaefbebb12045fb40c0bd16d5b01cb473a8d1a7c1",
+      "start-pa1retry500.cmd": "f18a2ea21669ebc6490129a58147a6e5892fdf01b3e0a0f9216ea67160fb8769"
+    }
+  },
+  "changes": [
+    "URL input and manual login deadline 120s retained",
+    "show current Hanoi UTC+7 time and calendar date",
+    "Enter automatically selects next strictly future slot in 11/13/15/17/19/21 schedule",
+    "refresh selection after all prompts to avoid a stale suggested slot",
+    "show selected run time, enter-chat time, wait duration and next slot when stopped",
+    "retain manual hour override and original single-session behavior"
+  ],
+  "preserved": [
+    "one visible Windows Edge/Chrome browser tab",
+    "first new envelope only",
+    "optional second native Open click after 500ms; native opening lock respected",
+    "at most two native requests for the same selected envelope",
+    "no ID prediction or direct API sender",
+    "original media filtering and connection recovery",
+    "original HTTP timeouts",
+    "user-selected single time window, 30s chat lead; no continuous scheduling added",
+    "observe-only mode"
+  ],
+  "tests": {
+    "passed": 15,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "extractedZip": true,
+    "seconds": 25.367484135999998
+  },
+  "installation": "fresh extracted ZIP; npm ci --ignore-scripts with pinned playwright-core 1.63.0 lockfile",
+  "realAuthenticatedClaimTested": false,
+  "windowsLauncherExecuted": false,
+  "privacy": "No user reports/state/credentials published; exported diagnostics omit authentication values, signatures and response bodies.",
+  "clockSource": "VPS system epoch converted to Hanoi UTC+7; no operating-system clock changes or remote clock synchronization."
+}
