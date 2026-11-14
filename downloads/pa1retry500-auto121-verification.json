@@ -1,0 +1,58 @@
+{
+  "release": "0.6.1-auto120",
+  "build": "pa1retry500",
+  "date": "2026-11-14",
+  "sha256": "8762992a5fbe936d564f04e5ff343c16ba46a54e8c41f427edd0503f2b16a37c",
+  "bytes": 21734,
+  "files": 12,
+  "baseline": {
+    "priorRelease": "0.6.0-auto120",
+    "originalZipSha256": "77887076da4697008aa904d47db5d29148f3d5a3aa736a9039541bf24161e894",
+    "byteIdenticalOriginalFiles": {
+      "fast-click.mjs": "1245481316d250d6a9f663b02f427773f6827b5ee06cb3f73c0458877bcbc247",
+      "second-open.mjs": "9afcbee579aa68fdb1b8220e1a118445c83d1444376f861465cb5a286b991066",
+      "start-pa1retry500.cmd": "f18a2ea21669ebc6490129a58147a6e5892fdf01b3e0a0f9216ea67160fb8769"
+    }
+  },
+  "tests": {
+    "passed": 23,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "extractedZipTests": 20,
+    "sourceUnitTests": 3,
+    "seconds": 91.23438094299999
+  },
+  "regressionEvidence": {
+    "before": "0.6.0 failed a browser reproduction: first envelope received while UI was unarmed was discarded; zero requests.",
+    "after": [
+      "keep first eligible in-window event until UI readiness",
+      "restore readiness even when that event has already been selected",
+      "duplicate frames do not create extra claims",
+      "no queued Open after Stop or window deadline"
+    ]
+  },
+  "changes": [
+    "separate received-event reservation from offering the event to native controls",
+    "keep transport health observable while navigation is blocked by a selected event",
+    "flush pending envelope immediately after UI readiness or reconnection",
+    "delivery report: state, queuedForReadiness, offeredAt and readinessWaitMs"
+  ],
+  "preserved": [
+    "one native UI flow, no direct API sender or ID prediction",
+    "at most two native Open clicks for first new envelope; optional second at 500ms; site lock respected",
+    "native Open minimum XHR timeout 30s",
+    "continuous Hanoi 11/13/15/17/19/21 schedule",
+    "30s chat lead and 5min post-round hold",
+    "URL input and 120s manual login deadline",
+    "media reduction and limited reconnection attempts"
+  ],
+  "installation": "fresh ZIP extraction; npm ci --ignore-scripts, pinned playwright-core 1.63.0",
+  "privacy": "Only generic source/artifacts published; no user reports, auth headers, cookies, tokens, signatures or response bodies.",
+  "limits": [
+    "This change does not speed up upstream delivery of a notification that has not reached the browser.",
+    "No measured increase in real reward success rate is claimed."
+  ],
+  "realAuthenticatedClaimTested": false,
+  "windowsLauncherExecuted": false
+}
