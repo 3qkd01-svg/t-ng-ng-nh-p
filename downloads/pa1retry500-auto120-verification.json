@@ -1,0 +1,49 @@
+{
+  "release": "0.6.0-auto120",
+  "build": "pa1retry500",
+  "date": "2026-11-14",
+  "sha256": "d56ab059a4bb6f49307d00b9121bbd01b40a1f4a4a4da928872363e8d3a13a5a",
+  "bytes": 21274,
+  "files": 12,
+  "baseline": {
+    "originalZipSha256": "77887076da4697008aa904d47db5d29148f3d5a3aa736a9039541bf24161e894",
+    "byteIdenticalOriginalFiles": {
+      "fast-click.mjs": "1245481316d250d6a9f663b02f427773f6827b5ee06cb3f73c0458877bcbc247",
+      "second-open.mjs": "9afcbee579aa68fdb1b8220e1a118445c83d1444376f861465cb5a286b991066",
+      "chat-recovery.mjs": "215d927630cf6e7294519804c5aa3301cf5560c1985c7287fd562deba3f81a1b",
+      "start-pa1retry500.cmd": "f18a2ea21669ebc6490129a58147a6e5892fdf01b3e0a0f9216ea67160fb8769"
+    }
+  },
+  "tests": {
+    "passed": 16,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "extractedZip": true,
+    "seconds": 49.684863394
+  },
+  "installation": "fresh ZIP extraction; npm ci --ignore-scripts, pinned playwright-core 1.63.0",
+  "changes": [
+    "continuous 11/13/15/17/19/21 Hanoi schedule; next day 11 after 21",
+    "same browser tab, context, authentication and persistent socket tracker across rounds",
+    "30s chat lead per round; one brief warm-up only at startup",
+    "5min post-round hold followed by home and next round, no Enter needed",
+    "failed/no-event rounds still continue; Enter or close stops all future rounds",
+    "per-round click budgets/counters/listeners and diagnostic cleanup",
+    "native Open XHR minimum 30s; no other endpoint timeouts changed or request replay",
+    "failed early warm-up still retries at scheduled chat entry"
+  ],
+  "preserved": [
+    "manual URL input",
+    "120s manual login deadline",
+    "first eligible new envelope only",
+    "at most two native Open clicks; second at 500ms when allowed by the site",
+    "native opening lock",
+    "media reduction",
+    "no direct API sender or ID prediction"
+  ],
+  "privacy": "No user reports, activity state, auth headers, cookies, tokens, signatures or response bodies published.",
+  "realAuthenticatedClaimTested": false,
+  "windowsLauncherExecuted": false,
+  "remoteServerAvailabilityGuaranteed": false
+}
