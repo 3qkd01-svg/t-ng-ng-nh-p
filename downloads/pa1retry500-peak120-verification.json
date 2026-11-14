@@ -1,0 +1,82 @@
+{
+  "release": "0.7.0-peak120",
+  "build": "pa1retry500",
+  "date": "2026-11-14",
+  "sha256": "a69ed60ece207df4ed1d0032df6cc1bc4e3a713e8a2689b536930fb1d41b5c83",
+  "bytes": 25523,
+  "files": 13,
+  "baseline": {
+    "priorRelease": "0.6.1-auto120",
+    "originalZipSha256": "77887076da4697008aa904d47db5d29148f3d5a3aa736a9039541bf24161e894",
+    "byteIdenticalOriginalFiles": {
+      "fast-click.mjs": "1245481316d250d6a9f663b02f427773f6827b5ee06cb3f73c0458877bcbc247",
+      "second-open.mjs": "9afcbee579aa68fdb1b8220e1a118445c83d1444376f861465cb5a286b991066",
+      "start-pa1retry500.cmd": "f18a2ea21669ebc6490129a58147a6e5892fdf01b3e0a0f9216ea67160fb8769"
+    }
+  },
+  "tests": {
+    "passed": 29,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "extractedZipTests": 29,
+    "seconds": 91.54,
+    "browser": "headless Chromium/Linux"
+  },
+  "browserEvidence": {
+    "cache": {
+      "comparison": "two full document navigations, same origin, cacheable static assets",
+      "previousServerFetchesPerAsset": 2,
+      "newServerFetchesPerAsset": 1,
+      "assets": [
+        "script",
+        "protected envelope image",
+        "CAPTCHA image"
+      ]
+    },
+    "filtering": [
+      "decorative banner and favicon blocked",
+      "protected images retained",
+      "unsolicited native Open outside an armed round blocked"
+    ],
+    "focus": [
+      "own page brought to front through Chromium",
+      "headless page visibility confirmed"
+    ],
+    "quietWindow": [
+      "timer sampling retained while DOM warning scans are deferred",
+      "DOM scans resume outside quiet interval",
+      "no DOM snapshot scheduled on pending native Open request"
+    ],
+    "recovery": [
+      "pending native bootstrap defers navigation",
+      "T-5s..T+3s navigation guard verified"
+    ],
+    "preserved": [
+      "first new event and duplicate handling",
+      "queued event survives UI/reconnection delay",
+      "one native UI flow",
+      "optional 500ms second native click and site lock",
+      "continuous next-slot scheduling",
+      "120-second login bound",
+      "no late click after Stop or expiry"
+    ]
+  },
+  "changes": [
+    "native CDP filtering preserves Chromium HTTP cache, falls back to old filter if unavailable",
+    "focus own tab at chat entry and T-3s",
+    "pause promotional animations and nonessential media, restore after round",
+    "defer periodic diagnostic work during critical window",
+    "remove DOM snapshot at native Open send",
+    "bounded bootstrap-aware reconnection deferral"
+  ],
+  "installation": "fresh ZIP extraction; npm ci --ignore-scripts; pinned playwright-core 1.63.0",
+  "privacy": "Generic source/artifacts only; no user report, credential, cookie, signature, token or chat transcript published.",
+  "limits": [
+    "Local mock and Linux Chromium checks; no measured live peak-hour improvement yet.",
+    "Notification timing still depends on site and network.",
+    "Window restoration on Windows and native Windows launcher execution were not tested."
+  ],
+  "realAuthenticatedClaimTested": false,
+  "windowsLauncherExecuted": false
+}
