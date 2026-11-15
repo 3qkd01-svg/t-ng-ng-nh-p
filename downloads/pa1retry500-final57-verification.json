@@ -1,0 +1,64 @@
+{
+  "release": "0.7.2-final57",
+  "build": "pa1retry500",
+  "date": "2026-11-15",
+  "sha256": "acd7ef2585086f32e82c360be2cc5756abd3a5b49e9e849fa0fd02a344a3d3b7",
+  "bytes": 26441,
+  "files": 14,
+  "baseline": {
+    "priorUserRelease": "0.7.1-peak15",
+    "publishedSourceBase": "0.7.0-peak120",
+    "originalZipSha256": "77887076da4697008aa904d47db5d29148f3d5a3aa736a9039541bf24161e894",
+    "byteIdenticalOriginalFiles": {
+      "fast-click.mjs": "1245481316d250d6a9f663b02f427773f6827b5ee06cb3f73c0458877bcbc247",
+      "second-open.mjs": "9afcbee579aa68fdb1b8220e1a118445c83d1444376f861465cb5a286b991066",
+      "start-pa1retry500.cmd": "f18a2ea21669ebc6490129a58147a6e5892fdf01b3e0a0f9216ea67160fb8769"
+    }
+  },
+  "tests": {
+    "passed": 37,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "extractedZipTests": 37,
+    "seconds": 123.748,
+    "browser": "headless Chromium/Linux"
+  },
+  "newEvidence": [
+    "Hanoi reload at HH:57:00 and chat at HH:59:45, including next day",
+    "one scheduled normal reload per automatic round",
+    "cookie/localStorage persist across reload in the same browser context",
+    "native Open headers/body and 30s minimum XHR timeout retained after reload",
+    "late startup skips reload without skipping the current round",
+    "Stop cancels a pending scheduled reload",
+    "slow pending document cancelled after timeout; usable page continues",
+    "lost login after reload yields bounded LOGIN_TIMEOUT with no claim"
+  ],
+  "preserved": [
+    "one native UI flow; no direct API sender or ID prediction",
+    "first new event and duplicate handling",
+    "queued event survives UI/reconnection delay",
+    "optional 500ms second native click and site opening lock",
+    "continuous Hanoi 11/13/15/17/19/21 schedule",
+    "120-second manual login bound",
+    "5-minute post-round hold then home",
+    "cache, decorative media filtering and critical-window diagnostics reduction",
+    "no late Open after Stop or expiry"
+  ],
+  "changes": [
+    "scheduled pre-round reload at T-180s",
+    "recheck login after reload",
+    "preRunReload report and console reload time",
+    "bundle 15-second chat entry defaults previously delivered by a local patch",
+    "stop stalled page loading after a failed reload"
+  ],
+  "installation": "fresh ZIP extraction; npm ci --ignore-scripts; pinned playwright-core 1.63.0",
+  "privacy": "Generic source/artifacts only; no user report, credential, cookie, token, signature or chat transcript published.",
+  "limits": [
+    "Local mocks and Linux Chromium tests; peak-hour success improvement unmeasured.",
+    "Windows native launcher was not executed.",
+    "User login may need manual renewal if the site invalidates it."
+  ],
+  "realAuthenticatedClaimTested": false,
+  "windowsLauncherExecuted": false
+}
