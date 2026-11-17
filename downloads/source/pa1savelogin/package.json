@@ -1,0 +1,15 @@
+{
+  "name": "pa1savelogin",
+  "version": "0.9.0-savelogin",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node pa1retry500.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "1.63.0"
+  }
+}

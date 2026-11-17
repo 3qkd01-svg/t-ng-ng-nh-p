@@ -1,0 +1,82 @@
+{
+  "release": "0.9.0-savelogin",
+  "build": "pa1retry500",
+  "date": "2026-11-17",
+  "sha256": "b0d61570151e2818b1ebbc5105cbc4f0394854dd9b6684a764344d08aab9ed40",
+  "bytes": 31585,
+  "files": 16,
+  "baseline": {
+    "priorRelease": "0.8.0-click100x2",
+    "priorZipSha256": "76b7abb5baca9a2123f95dfd5a1cede764ee215b874768d7f32d4e091ad2d6c1",
+    "byteIdenticalFiles": {
+      "browser-peak.mjs": "6168273789437a9303255bb23b097d5b0c70f75d420fea3640d021de006ec203",
+      "chat-recovery.mjs": "b63f7fddaf62e075827c18a8cabf625c96b30a800e09973d894c3ecaacadcbdd",
+      "fast-click.mjs": "a6b22136eb1a2295844dba56f902331d31c4db63cc4b208bc08615032b969d4d",
+      "second-open.mjs": "945371481405963924c2d12c27eb70a6b90e8af44f714473b9246826b7ab92cb",
+      "open-timeout.mjs": "14a3984c15f7d3934bc06ad69fe937993b14e5769f9b61a7603ab28b8c0a9a08",
+      "opt-diagnostics.mjs": "fdb20de5b580f8f7af08f7d2f4092d5317696682ae3b3fb5d4539ee275371a30",
+      "plan1-common.mjs": "d544b7eb4aa7ffeac137f4f4c09065c04f563313e9e054628dd32a51031e87bd",
+      "scheduled-reload.mjs": "46d322951912e73f91e6d1f4341555d454cd11988c1cd4f147368d62c60fa386",
+      "startup-link120.mjs": "5c37d0b97ed3748390f496821b2033c8d1f5b4b52c117048473c850521b3363d",
+      "start-pa1retry500.cmd": "f18a2ea21669ebc6490129a58147a6e5892fdf01b3e0a0f9216ea67160fb8769"
+    }
+  },
+  "tests": {
+    "passed": 69,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "persistenceChecks": 21,
+    "regressionChecks": 48,
+    "extractedZipTests": 69,
+    "seconds": 180.483,
+    "browser": "headless Chromium/Linux"
+  },
+  "newEvidence": [
+    "valid link file is required before any saved session is used",
+    "missing or damaged link/session files fall back to manual login",
+    "HTTP-only cookies and current-page localStorage saved after UI login confirmation",
+    "copy of both folders restores login in a fresh Chromium process with synthetic credentials",
+    "expired/rejected sessions still need UI confirmation and do not overwrite the previous saved session",
+    "new origin starts with a clean context",
+    "browser rejecting a saved state falls back without printing its exception",
+    "checkpoints deferred near publication and run after the round",
+    "overlapping saves share one capture; complete JSON files replace prior files",
+    "reports and console do not include synthetic auth values"
+  ],
+  "changes": [
+    "link-login/link.json and cookie-tai-khoan/session.json created locally after login",
+    "saved link offered as the next startup default",
+    "saved state supplied to the new browser context on the same origin",
+    "save after login, pre-round reload, round completion, periodic idle checkpoint and normal Enter exit",
+    "private directories ignored by Git and excluded from release archive"
+  ],
+  "preserved": [
+    "all nine existing helper modules and launcher byte-identical",
+    "100ms first Open and extra same-card Open after 500ms, capped at two native requests",
+    "Hanoi 11/13/15/17/19/21 automatic schedule",
+    "minute-57 reload and 15-second chat lead",
+    "120-second manual login limit",
+    "HTTP cache, media filtering and limited connection recovery",
+    "5-minute post-round hold then home"
+  ],
+  "installation": "fresh ZIP extraction; npm ci --ignore-scripts; pinned playwright-core 1.63.0",
+  "authStorage": {
+    "format": "portable JSON, cookies plus current-origin localStorage",
+    "encrypted": false,
+    "includedInZip": false,
+    "includedInReports": false,
+    "unixFileMode": "0600",
+    "unixDirectoryMode": "0700",
+    "windowsPermissions": "inherited from the local user directory"
+  },
+  "privacy": "Generic source/artifacts only; no user session, cookie, credential, report or transcript published.",
+  "limits": [
+    "Portable login tested with synthetic credentials and a mock site, not a real account on another VPS.",
+    "The site may require manual login/verification after expiry or IP/device changes.",
+    "SessionStorage, IndexedDB, in-memory state and browser fingerprint are not exported.",
+    "Windows native launcher was not executed."
+  ],
+  "realAuthenticatedClaimTested": false,
+  "windowsLauncherExecuted": false
+}
