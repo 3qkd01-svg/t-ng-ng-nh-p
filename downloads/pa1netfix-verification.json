@@ -1,0 +1,50 @@
+{
+  "release": "0.10.0-netfix",
+  "baseline": "0.9.0-savelogin",
+  "zipSha256": "319dc0b18fb4394f80001dda5e2536ad09a2884bbea59875effda31a7a70c1e8",
+  "zipBytes": 36228,
+  "files": 17,
+  "sourceMatchesArchive": true,
+  "nodeTests": {
+    "tests": 46,
+    "pass": 46,
+    "fail": 0,
+    "mode": "fresh extracted ZIP; Chromium on Linux; local HTTP and WebSocket fixtures"
+  },
+  "cpuHelperTests": {
+    "scenarios": 7,
+    "mode": "PowerShell 7.4.6 on Linux with mocked process APIs; not native Windows"
+  },
+  "browserPidDiscovery": "verified with real Chromium CDP SystemInfo.getProcessInfo",
+  "nativeWindowsPriorityTested": false,
+  "liveTargetClaimsTested": false,
+  "frozenBaselineModules": [
+    "browser-peak.mjs",
+    "chat-recovery.mjs",
+    "opt-diagnostics.mjs",
+    "plan1-common.mjs",
+    "scheduled-reload.mjs",
+    "startup-link120.mjs",
+    "session-store.mjs",
+    "start-pa1retry500.cmd"
+  ],
+  "fileSha256": {
+    ".gitignore": "01c270a2bf3bd1ea8c28355f40bebf4774aaa7e63c763f4a73ce8496b6038aed",
+    "HUONG-DAN.txt": "14df859441e9132204cffe14594a31612c645cc8b3069f3536cd8c53f6e55a99",
+    "browser-peak.mjs": "6168273789437a9303255bb23b097d5b0c70f75d420fea3640d021de006ec203",
+    "chat-recovery.mjs": "b63f7fddaf62e075827c18a8cabf625c96b30a800e09973d894c3ecaacadcbdd",
+    "cpu-boost.mjs": "5b3e59bc1781357fe2356c49bd22320ba08f71d045ba494e617f223262a38ffd",
+    "cpu-priority.ps1": "4ec94a9bcbfeb5f2ca19e1ceb9de32329e9c396a23c1cd0fb4eac449a1fcebe5",
+    "fast-click.mjs": "1ab3d6093e7446cbb36ddab7d2e5744a3202c154e5a92fb7f60099d5f354e0af",
+    "opt-diagnostics.mjs": "fdb20de5b580f8f7af08f7d2f4092d5317696682ae3b3fb5d4539ee275371a30",
+    "pa1retry500.mjs": "c1277b424e9b96714a5d652af66ded1e2197acb5c2931710a9965adf4ecc3f81",
+    "package-lock.json": "07f185e70b6d48d56f627fe9e4f655673e303fb95e2bc075b932dc4734d48cab",
+    "package.json": "315ab3d63ec43244e7ffc95ae51b5b2b3ac110763138ade6b31bcfcd42f8d29c",
+    "plan1-common.mjs": "d544b7eb4aa7ffeac137f4f4c09065c04f563313e9e054628dd32a51031e87bd",
+    "request-health.mjs": "b522349fa114d38eebd9b0d4aceb4ab3d26abaa70bdfde981ea1174abf789b55",
+    "scheduled-reload.mjs": "46d322951912e73f91e6d1f4341555d454cd11988c1cd4f147368d62c60fa386",
+    "session-store.mjs": "ba06891bae3bd49283b409c398d8d95dbc6fc7cc608cbc809ccb6c246835954c",
+    "start-pa1retry500.cmd": "f18a2ea21669ebc6490129a58147a6e5892fdf01b3e0a0f9216ea67160fb8769",
+    "startup-link120.mjs": "5c37d0b97ed3748390f496821b2033c8d1f5b4b52c117048473c850521b3363d"
+  }
+}
