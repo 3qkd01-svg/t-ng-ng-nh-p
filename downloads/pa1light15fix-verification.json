@@ -1,0 +1,83 @@
+{
+  "release": "0.11.2-chat-recovery",
+  "baseline": "0.11.1-chatlight15",
+  "zipSha256": "ed41d00ac0f8836191c4d55821900c9b13c67603566a6e3513e0b1205ef08bd2",
+  "zipBytes": 42937,
+  "files": 19,
+  "sourceMatchesArchive": true,
+  "frozenRuntimeHelperFiles": [
+    ".gitignore",
+    "browser-peak.mjs",
+    "chat-light.mjs",
+    "cpu-boost.mjs",
+    "cpu-priority.ps1",
+    "opt-diagnostics.mjs",
+    "plan1-common.mjs",
+    "request-health.mjs",
+    "scheduled-reload.mjs",
+    "session-store.mjs",
+    "start-normal-chat.cmd",
+    "start-pa1retry500.cmd",
+    "startup-link120.mjs"
+  ],
+  "tests": {
+    "tests": 73,
+    "pass": 73,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "durationMs": 156413.792579,
+    "mode": "fresh extracted ZIP; Chromium/local HTTP and WS; Vue 2.7.16/Vuex 3.6.2; mocked process APIs",
+    "newRegressionChecks": 11,
+    "covers": [
+      "initial getToken failure and recovery before publication",
+      "initial wait beyond old 15-second cutoff with real 12s grace/15s cooldown",
+      "one shared three-attempt budget",
+      "bootstrap in-flight deferral",
+      "queued envelope before UI readiness",
+      "no reload or repeated native Open after request",
+      "Hanoi continuous schedule and T-15s entry",
+      "lightweight chat and native result handling",
+      "saved login and 120-second manual login timeout",
+      "rate limits and native response/timeout/abort outcomes"
+    ]
+  },
+  "priorityHelper": {
+    "tests": 7,
+    "pass": 7,
+    "mode": "PowerShell 7.4.6 with mocked Windows process APIs; helper byte-identical to the tested extracted ZIP"
+  },
+  "chatEntryLeadMs": 15000,
+  "recovery": {
+    "maxAttempts": 3,
+    "graceMs": 12000,
+    "cooldownMs": 15000,
+    "initialWait": "round deadline",
+    "sameTabReload": true,
+    "deadSocketMayRecoverDuringQuietWindow": true
+  },
+  "maxNativeOpenRequests": 1,
+  "nativeWindowsPriorityTested": false,
+  "liveTargetClaimsTested": false,
+  "fileSha256": {
+    ".gitignore": "01c270a2bf3bd1ea8c28355f40bebf4774aaa7e63c763f4a73ce8496b6038aed",
+    "HUONG-DAN.txt": "b679b45d11216f3264dc2c419767fcc162ce55872dca34ee3b917c893d76e7dd",
+    "browser-peak.mjs": "6168273789437a9303255bb23b097d5b0c70f75d420fea3640d021de006ec203",
+    "chat-light.mjs": "fbc2e715cc96cdc3d861bbe55190f73e4247e0898b3b27082cdf0fa67e374800",
+    "chat-recovery.mjs": "c6517707b89aae561ce9e00ddc4438f79de19aecc88cff53bd7afd48cf5754e1",
+    "cpu-boost.mjs": "5b3e59bc1781357fe2356c49bd22320ba08f71d045ba494e617f223262a38ffd",
+    "cpu-priority.ps1": "4ec94a9bcbfeb5f2ca19e1ceb9de32329e9c396a23c1cd0fb4eac449a1fcebe5",
+    "fast-click.mjs": "e282ad0fb3f39c193d58476e31d1bc321fcbb635ff966b696aec173b2c626663",
+    "opt-diagnostics.mjs": "fdb20de5b580f8f7af08f7d2f4092d5317696682ae3b3fb5d4539ee275371a30",
+    "pa1retry500.mjs": "45a68fc6a4e7c452aba048f296285cfd7c94779dda7c87ddfc3f48fdf4ce4bca",
+    "package-lock.json": "d9cd812142e3e25bd181e6113e3b32df18caa730e48c9d8aea23c0510f3a3b6c",
+    "package.json": "41387707715687839608b9f19c4cd8edc09146854d12b9a203d6b8d958f44593",
+    "plan1-common.mjs": "d544b7eb4aa7ffeac137f4f4c09065c04f563313e9e054628dd32a51031e87bd",
+    "request-health.mjs": "b522349fa114d38eebd9b0d4aceb4ab3d26abaa70bdfde981ea1174abf789b55",
+    "scheduled-reload.mjs": "46d322951912e73f91e6d1f4341555d454cd11988c1cd4f147368d62c60fa386",
+    "session-store.mjs": "ba06891bae3bd49283b409c398d8d95dbc6fc7cc608cbc809ccb6c246835954c",
+    "start-normal-chat.cmd": "727aba6f05cec349c8be1655c0a4ca72e4d98f02301a556b4b25a6c1d6f19752",
+    "start-pa1retry500.cmd": "f18a2ea21669ebc6490129a58147a6e5892fdf01b3e0a0f9216ea67160fb8769",
+    "startup-link120.mjs": "5c37d0b97ed3748390f496821b2033c8d1f5b4b52c117048473c850521b3363d"
+  }
+}
