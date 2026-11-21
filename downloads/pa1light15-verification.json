@@ -1,0 +1,48 @@
+{
+  "release": "0.11.1-chatlight15",
+  "baseline": "0.11.0-chatlight",
+  "zipSha256": "049bebbf2ed1af2a93c40eb3759b700b7c52ef96f1993b57a2ca81ff127ddeed",
+  "zipBytes": 41427,
+  "files": 19,
+  "sourceMatchesArchive": true,
+  "runtimeChangeScope": "chat-entry lead 3s to 15s, matching display, release metadata only; enforced by packager",
+  "chatEntryLeadMs": 15000,
+  "clockDisplay": "xx:59:45 Hanoi",
+  "targetedTests": {
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "mode": "fresh extracted ZIP; real Chromium/local HTTP and WS fixtures",
+    "covers": [
+      "Hanoi slot selection and entry lead",
+      "real default 15-second UI entry before event",
+      "immediate single native Open",
+      "automatic next-round scheduling and CPU leases"
+    ]
+  },
+  "frozenRuntimeHelperFiles": 15,
+  "inheritedBaselineVerification": "pa1light-verification.json; 62 baseline tests; not rerun in full for this timing-only update",
+  "nativeWindowsPriorityTested": false,
+  "liveTargetClaimsTested": false,
+  "fileSha256": {
+    ".gitignore": "01c270a2bf3bd1ea8c28355f40bebf4774aaa7e63c763f4a73ce8496b6038aed",
+    "HUONG-DAN.txt": "6ecf96913f9d4eb8129623833b6add1d111d10132c24d5d6b754873b1683556f",
+    "browser-peak.mjs": "6168273789437a9303255bb23b097d5b0c70f75d420fea3640d021de006ec203",
+    "chat-light.mjs": "fbc2e715cc96cdc3d861bbe55190f73e4247e0898b3b27082cdf0fa67e374800",
+    "chat-recovery.mjs": "b63f7fddaf62e075827c18a8cabf625c96b30a800e09973d894c3ecaacadcbdd",
+    "cpu-boost.mjs": "5b3e59bc1781357fe2356c49bd22320ba08f71d045ba494e617f223262a38ffd",
+    "cpu-priority.ps1": "4ec94a9bcbfeb5f2ca19e1ceb9de32329e9c396a23c1cd0fb4eac449a1fcebe5",
+    "fast-click.mjs": "1ab3d6093e7446cbb36ddab7d2e5744a3202c154e5a92fb7f60099d5f354e0af",
+    "opt-diagnostics.mjs": "fdb20de5b580f8f7af08f7d2f4092d5317696682ae3b3fb5d4539ee275371a30",
+    "pa1retry500.mjs": "1db21d029daba668840c9a7f826dab4e2f1d415dba716eba9a89e6fcf017605f",
+    "package-lock.json": "dfb34030977c6714af21cbea31cf448a24c9736329c83a62e2292bde906bf732",
+    "package.json": "1bf356b0f2e3fdba4919e7a3bf75220229f875729ee353b1f8a23f6e7935677d",
+    "plan1-common.mjs": "d544b7eb4aa7ffeac137f4f4c09065c04f563313e9e054628dd32a51031e87bd",
+    "request-health.mjs": "b522349fa114d38eebd9b0d4aceb4ab3d26abaa70bdfde981ea1174abf789b55",
+    "scheduled-reload.mjs": "46d322951912e73f91e6d1f4341555d454cd11988c1cd4f147368d62c60fa386",
+    "session-store.mjs": "ba06891bae3bd49283b409c398d8d95dbc6fc7cc608cbc809ccb6c246835954c",
+    "start-normal-chat.cmd": "727aba6f05cec349c8be1655c0a4ca72e4d98f02301a556b4b25a6c1d6f19752",
+    "start-pa1retry500.cmd": "f18a2ea21669ebc6490129a58147a6e5892fdf01b3e0a0f9216ea67160fb8769",
+    "startup-link120.mjs": "5c37d0b97ed3748390f496821b2033c8d1f5b4b52c117048473c850521b3363d"
+  }
+}
